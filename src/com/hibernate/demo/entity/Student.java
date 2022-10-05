@@ -30,6 +30,11 @@ public class Student {
 		this.id = id;
 	}
 
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + "]";
+	}
+
 	public String getFirstName() {
 		return firstName;
 	}

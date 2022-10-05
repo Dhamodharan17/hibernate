@@ -17,7 +17,13 @@ public class CreateStudentDemo {
 		Session session = factory.getCurrentSession();
 		
 		try {
+			Student student = new Student("Karthik","Sundar","kartik@email.com");
 			
+			session.beginTransaction();
+			
+			session.save(student);
+			
+			session.getTransaction().commit();
 		}
 		finally {
 			factory.close();
